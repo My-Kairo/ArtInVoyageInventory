@@ -1,0 +1,37 @@
+h1 {
+    color: navy;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 4px;
+    margin-top: 100px;
+    margin-left: 350px;
+    margin-right: 5px;
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    padding-right: 3px;
+    width: 50%;
+    text-align: center;
+    height: 450px;
+}
+
+.inputlog {
+    width: 50%;
+    align-self: center;
+
+}
+.logbut {
+    width: 10%;
+    align-self: center;
+}
+.loginlink {
+    text-decoration: none;
+}
+.btn {
+    background-color: navy;
+}
