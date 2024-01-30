@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styel.css" >
+    
 </head>
 <body>
     <div class="container">
@@ -15,7 +16,7 @@
             </button>
         </div>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for item...">
+            <input type="text" class="form-control" placeholder="Search for item..." autocomplete="off">
             <span class="input-group-btn">
                 <button class="btn-search" type="button">
                     <i class="fa fa-search fa-fw">
@@ -23,14 +24,19 @@
                     Search
                 </button>
             </span>
-        </div>
-        
+            <div class="myresults"></div>
+            </div>
+    
+            <div class="products-results">
+
+            </div>
         <div class="row1">
+          
             <div class="nosugar-coke">
                 
                 <label class="drink-check">
                     <p class="drink-labels">
-                    Coke - No sugar 330ml
+                    Coke - No sugar 330ml 
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
@@ -38,6 +44,7 @@
                 <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
             </div>
 
+          
 
         
             <div class="nosugar-coke">
@@ -446,5 +453,6 @@
 
     </div>
     
+    <script src="./search.js"></script>
 </body>
 </html>
