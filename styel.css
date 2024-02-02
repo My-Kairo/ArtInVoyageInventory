@@ -28,6 +28,8 @@ h1 {
 .logbut {
     width: 10%;
     align-self: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .loginlink {
     text-decoration: none;

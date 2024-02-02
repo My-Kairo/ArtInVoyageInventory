@@ -18,6 +18,7 @@ const inputBox = document.querySelector(".form-control");
 const myResults = document.querySelector(".myresults");
 const productsResult = document.querySelector('.products-results');
 const mybtn = document.querySelector(".btn-search");
+const loginbtn = document.querySelector(".logbut");
 
 let result = [];
 inputBox.onkeyup = function(){
@@ -61,15 +62,32 @@ function displayProducts(result){
     </label>
     <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button></div><vl></vl>`;
         // return html;
+       
     });
     productsResult.innerHTML = html;
 }
+
+function selectingProducts (){
+    for( const input of myResults){
+        input.addEventListener('click', function myClick(){
+            alert('clicked');
+            console.log(e);
+            
+        }, false);
+    }
+
+}
+mybtn.addEventListener('click', display);
 
 function selectInput(list){
     inputBox.value = list.innerHTML;
     myResults.innerHTML = '';
 }
-// result.addEventListern("click", display)
+// function yeske(){
+//     alert('mamakhe');
+// }
+
+loginbtn.addEventListern("click", yeske);
 
 // inputBox.addEventListener((e) => {
 //     myResults = e.target.value;
