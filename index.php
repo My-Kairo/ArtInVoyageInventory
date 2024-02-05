@@ -1,13 +1,14 @@
 <?php
-    // session_start();
+    session_start();
 
     // include("connection.php");
     $local_db = new mysqli("localhost", "root", "", "inventory");
     if ($local_db->connect_error){
     die("Connection failed". $local_db->connect_error);
+    
     }
     echo "Connection successful";
-    $local_db->close();
+    
 
     // if($_SERVER['REQUEST_METHOD'] == "POST")
     // {
@@ -25,6 +26,26 @@
     // }
     // var_dump($con);
 
+
+    if (isset($_POST['submit']))
+{
+    if(empty($_POST['username']) || empty($_POST['password'])){
+        echo 'Fill in credentials';
+    }
+    else{
+        $userName = $_POST['username'];
+        $passWord = $_POST['password'];
+
+        $query = " insert into stock (username, password) values('$userName', '$passWord')";
+        $results = mysqli_query($local_db,$query);
+        
+        if($results){
+            echo 'data insterted';
+        }
+        
+    }
+}
+$local_db->close();
 
 ?>
 
@@ -56,8 +77,8 @@
             <button class="logbut" type="submit" value="submit" onclick="yeske();">
                 <a class="loginlink" href="./products.php" >LOGIN</a>
             </button><br>
-            <a href="#">Forgot Pasword?</a><br>
-            <a href="#">New user? Register here</a><br>
+            <a href="forgotPas.html">Forgot Pasword?</a><br>
+            <a href="register.html">New user? Register here</a><br>
         </form>
     </div>
     <script src="search.js"></script>

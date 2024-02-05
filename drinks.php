@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styel.css" >
-    
+    <script src="./cart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -31,17 +31,18 @@
 
             </div>
         <div class="row1">
+            <!-- <form id="myitems"> -->
           
             <div class="nosugar-coke">
                 
-                <label class="drink-check">
+                <label class="drink-check" onclick="display();">
                     <p class="drink-labels">
                     Coke - No sugar 330ml 
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();" >ADD : &#x1F6D2</button>
             </div>
 
           
@@ -49,85 +50,85 @@
         
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Coke - No sugar 440ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div><vl></vl>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Coke - No sugar 500ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div><vl></vl>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Coke - Original 330ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div>
             
-            
+            <!-- </form>  -->
 
         </div>
         <div class="row2">
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Coke - Original 500ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div><vl></vl>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Fanta-pine 330ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div><vl></vl>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Fanta-pine 440ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div><vl></vl>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Fanta-pine 500ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div>
             
 
@@ -135,47 +136,47 @@
         <div class="row2">
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Coke - Original 440ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Irone-brew 330ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Iron-brew 440ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div><vl></vl>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Iron-brew 500ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div>
             
 
@@ -184,48 +185,48 @@
         <div class="row2">
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                     Creem-soda 330ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div><vl></vl>
 
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                         Spring water 500ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div><vl></vl>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                         Spring water 750ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div><vl></vl>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                         Sparkling water 500ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div>
             
 
@@ -233,36 +234,36 @@
         <div class="row2">
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                         Sparkling water 750ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div><vl></vl>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                         Creem-soda 440ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div><vl></vl>
             <div class="nosugar-coke">
 
-                <label class="drink-check">
+                <label class="drink-check" onclick="displayProducts();">
                     <p class="drink-labels">
                         Creem-soda 440ml
                     </p>
                     <input type="checkbox" class="checkbox" >
                     <span class="checkmark"></span>
                 </label>
-                <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button>
+                <button class="cart-btn" type="submit" value="submit" onclick="addingCart();">ADD : &#x1F6D2</button>
             </div>
         </div>
 
@@ -453,6 +454,7 @@
 
     </div>
     
-    <script src="./search.js"></script>
+    <script src="search.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>

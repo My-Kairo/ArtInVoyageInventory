@@ -19,6 +19,7 @@ const myResults = document.querySelector(".myresults");
 const productsResult = document.querySelector('.products-results');
 const mybtn = document.querySelector(".btn-search");
 const loginbtn = document.querySelector(".logbut");
+const myStock = document.querySelectorAll(".drink-check");
 
 let result = [];
 inputBox.onkeyup = function(){
@@ -43,7 +44,7 @@ function display(result){
     const items = result.map((list)=>{
 
         
-        return "<li onclick=selectInput(this)>" + list + "</li>";
+        return "<li onclick=addingCart()>" + list + "</li>";
     })
     myResults.innerHTML = "<ul>" + items.join('') + "</ul";
 
@@ -61,10 +62,11 @@ function displayProducts(result){
         <span class="checkmark"></span>
     </label>
     <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button></div><vl></vl>`;
-        // return html;
+        return html;
        
     });
     productsResult.innerHTML = html;
+    
 }
 
 function selectingProducts (){
@@ -77,17 +79,38 @@ function selectingProducts (){
     }
 
 }
-mybtn.addEventListener('click', display);
 
-function selectInput(list){
-    inputBox.value = list.innerHTML;
-    myResults.innerHTML = '';
-}
+// function display(result) {
+
+//     const mylist = document.createElement('ul');
+
+//     for (let i = 0; i < result.length; i++) {
+//         const li = document.createElement('li');
+//         li.textContent = result[i];
+//         li.onclick = () => selectInput(result[i]);
+//         mylist.appendChild(li);
+//     }
+
+//     myResults.innerHTML = '';
+//     myResults.appendChild(mylist);
+// }
+
+// function selectInput(list){
+//     inputBox.value = list;
+//     myResults.innerHTML = '';
+//     console.log('test');
+// }
+// mybtn.addEventListener('click', display);
+
+// function selectInput(list){
+//     inputBox.value = list.innerHTML;
+//     myResults.innerHTML = '';
+// }
 // function yeske(){
 //     alert('mamakhe');
 // }
 
-loginbtn.addEventListern("click", yeske);
+// loginbtn.addEventListern("click", yeske);
 
 // inputBox.addEventListener((e) => {
 //     myResults = e.target.value;
