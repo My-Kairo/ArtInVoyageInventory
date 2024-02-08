@@ -1,3 +1,11 @@
+// function selected(){
+
+//     var selectedItem = document.querySelector('.nosugar-coke').value;
+//     console.log(selectedItem);
+
+// }
+// selected();
+
 let products = ['Coke - No sugar 330ml', 'Coke - No sugar 440ml', 'Coke - No sugar 500ml',
 'Coke - Original 330ml', 'Coke - Original 500ml', 'Fanta-pine 330ml', 'Fanta-pine 440ml', 
 'Fanta-pine 500ml', 'Coke - Original 440ml', 'Irone-brew 330ml', 'Iron-brew 440ml', 
@@ -19,17 +27,15 @@ const myResults = document.querySelector(".myresults");
 const productsResult = document.querySelector('.products-results');
 const mybtn = document.querySelector(".btn-search");
 const loginbtn = document.querySelector(".logbut");
-const myStock = document.querySelectorAll(".drink-check");
+
+// inputBox.addEventListener('keyup', (e) => {
+//     console.log(e.target.value);
+// })
 
 let result = [];
+inputBox.onkeyup = function(e){
+    console.log(e.target.value);
 
-inputBox.addEventListener('keyup', ()=>{
-    myResults.innerText = inputBox.value;
-
-});
-
-inputBox.onkeyup = function(){
-    
     let input = inputBox.value;
     if (input.length){
         result = products.filter((keyword)=> {
@@ -40,18 +46,23 @@ inputBox.onkeyup = function(){
     display(result);
     displayProducts(result);
     
-    if(!result.length){
-        result.innerHTML = '';
-    }
+   
 }
 
 function display(result){
+
+    if(!result.length){
+        return myResults.classList.remove('show');
+        // result.innerHTML = '';
+    }
     
     const items = result.map((list)=>{
 
-        return `<li onclick='addingCart();'>${list}</li>`;
+        
+        return "<li >" + list + "</li>";
     })
-    myResults.innerHTML = "<ul>" + items.join('') + "</ul>";
+    myResults.innerHTML = "<ul>" + items.join('') + "</ul";
+    myResults.classList.add('show');
 
 }
 
@@ -67,65 +78,20 @@ function displayProducts(result){
         <span class="checkmark"></span>
     </label>
     <button class="cart-btn" type="submit" value="submit">ADD : &#x1F6D2</button></div><vl></vl>`;
-        return html;
+        // return html;
        
     });
     productsResult.innerHTML = html;
     
 }
 
-
-
-// function selectingProducts (){
-//     for( const input of myResults){
-//         input.addEventListener('click', function myClick(){
-//             alert('clicked');
-//             console.log(e);
-            
-//         }, false);
-//     }
-
+// var carts = document.querySelectorAll('.products-results');
+// console.log(carts);
+// function addingCart(){
+//     console.log('added to cart')
 // }
-
-// function display(result) {
-
-//     const mylist = document.createElement('ul');
-
-//     for (let i = 0; i < result.length; i++) {
-//         const li = document.createElement('li');
-//         li.textContent = result[i];
-//         li.onclick = () => selectInput(result[i]);
-//         mylist.appendChild(li);
-//     }
-
-//     myResults.innerHTML = '';
-//     myResults.appendChild(mylist);
+// addingCart();
+// for (const theCart of carts){
+//     theCart.addEventListener('click', addingCart);
+//     console.log("finally");
 // }
-
-// function selectInput(list){
-//     inputBox.value = list;
-//     myResults.innerHTML = '';
-//     console.log('test');
-// }
-// mybtn.addEventListener('click', display);
-
-// function selectInput(list){
-//     inputBox.value = list.innerHTML;
-//     myResults.innerHTML = '';
-// }
-// function yeske(){
-//     alert('mamakhe');
-// }
-
-// loginbtn.addEventListern("click", yeske);
-
-// inputBox.addEventListener((e) => {
-//     myResults = e.target.value;
-//     result
-// })
-
-// function subFunction(){
-//     myResults.innerHTML = result;
-// }
-
-// mybtn.addEventListener("click", subFunction);

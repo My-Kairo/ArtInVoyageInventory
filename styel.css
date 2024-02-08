@@ -461,8 +461,24 @@ vl {
     display: flex;
     align-items: center;
     flex-direction: row;
+    background-color: rgb(156, 154, 154);
+    width: 100%;
 }
 
-#myitems {
-    
+.popup {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.popup-content {
+    height: 300px;
+    width: 400px;
+    padding: 20px;
+    position: relative;
 }
