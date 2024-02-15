@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styel.css" >
+    <script src="search.js"></script>
+    <script scr="cart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -24,6 +26,11 @@
                 </button>
             </span>
             <div class="myresults"></div>
+            </div>
+    
+            <div class="products-results">
+
+            </div>
         </div>
         <div class="row1">
             <div class="nosugar-coke">

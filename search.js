@@ -20,20 +20,26 @@ const productsResult = document.querySelector('.products-results');
 const mybtn = document.querySelector(".btn-search");
 const loginbtn = document.querySelector(".logbut");
 const myStock = document.querySelectorAll(".drink-check");
+const theBox = document.querySelector('.nosugar-coke');
+const mySearch = document.querySelector('.input-group');
+
+import MyCart from "./addFactory";
 
 let result = [];
+var cartInstant = MyCart(result);
 
-inputBox.addEventListener('keyup', ()=>{
-    myResults.innerText = inputBox.value;
-
-});
+// inputBox.addEventListener('keyup', ()=>{
+//     myResults.innerText = inputBox.value;
+//     console.log(myResults);
+    
+// });
 
 inputBox.onkeyup = function(){
     
     let input = inputBox.value;
     if (input.length){
-        result = products.filter((keyword)=> {
-           return keyword.toLocaleLowerCase().includes(input.toLocaleLowerCase());
+        result = products.filter((item)=> {
+           return item.toLocaleLowerCase().includes(input.toLocaleLowerCase());
         });
         console.log(result);
     }
@@ -49,14 +55,13 @@ function display(result){
     
     const items = result.map((list)=>{
 
-        return `<li onclick='addingCart();'>${list}</li>`;
+        return `<li>${list}</li>`;
     })
     myResults.innerHTML = "<ul>" + items.join('') + "</ul>";
-
 }
 
 function displayProducts(result){    
-    let html =``;
+    let html ='';
 
     result.map((list)=>{
        html += `<div class="nosugar-coke"><label class="drink-check">
@@ -73,9 +78,25 @@ function displayProducts(result){
     productsResult.innerHTML = html;
     
 }
+mybtn.addEventListener('click', function(){
+    alert('clicked');
+    for(i=0; i<result.length; i++){
+        return result[i];
+        
+    }console.log(result[i]);
+})
 
+function displayItems(){
+       
+}
 
-
+// myResults.forEach(function(result){
+//     result.addEventListener('click', function(){
+//         item = this.item;
+//         inputBox.value = item;
+//         alert('this is my list');
+//     })
+// })
 // function selectingProducts (){
 //     for( const input of myResults){
 //         input.addEventListener('click', function myClick(){
@@ -87,7 +108,7 @@ function displayProducts(result){
 
 // }
 
-// function display(result) {
+
 
 //     const mylist = document.createElement('ul');
 
@@ -102,19 +123,19 @@ function displayProducts(result){
 //     myResults.appendChild(mylist);
 // }
 
+
 // function selectInput(list){
 //     inputBox.value = list;
 //     myResults.innerHTML = '';
 //     console.log('test');
 // }
-// mybtn.addEventListener('click', display);
 
 // function selectInput(list){
 //     inputBox.value = list.innerHTML;
 //     myResults.innerHTML = '';
 // }
 // function yeske(){
-//     alert('mamakhe');
+// function yeske(){
 // }
 
 // loginbtn.addEventListern("click", yeske);

@@ -1,0 +1,13 @@
+{
+  "name": "artinvoyage",
+  "version": "1.0.0",
+  "main": "search.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "module": "^1.2.5",
+    "node": "^21.6.1",
+    "require": "^2.4.20"
+  }
+}

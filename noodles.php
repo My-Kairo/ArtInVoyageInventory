@@ -24,6 +24,11 @@
                 </button>
             </span>
             <div class="myresults"></div>
+            </div>
+    
+            <div class="products-results">
+
+            </div>
         </div>
         <div class="row1">
             <div class="nosugar-coke">
@@ -131,7 +136,8 @@
             </div>
         </div>
     </div>
-    <script src="./search.js"></script>
+    <script src="search.js"></script>
+    <script scr="cart.js"></script>
     
 </body>
 </html>

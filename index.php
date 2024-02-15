@@ -1,55 +1,26 @@
 <?php
-//     session_start();
-
-//     // include("connection.php");
-//     $local_db = new mysqli("localhost", "root", "", "inventory");
-//     if ($local_db->connect_error){
-//     die("Connection failed". $local_db->connect_error);
     
-//     }
-//     echo "Connection successful";
-    
-
-//     // if($_SERVER['REQUEST_METHOD'] == "POST")
-//     // {
-//     //     $userName = $_POST['username'];
-//     //     $passWord = $_POST['password'];
-
-//     //     if(!empty($userName) && !empty($passWord)){
-//     //         $query = "Insert into inventory (username, password) values ('$userName', '$passWord' )";
-//     //         mysqli_query($con, $query);
-//     //         echo "<script type='text/javascript'> alert('Successfully logged in')</script>";
-//     //     }else {
-//     //         echo "<script type='text/javascript'> alert('Enter valid credentials')</script>";
-
-//     //     }
-//     // }
-//     // var_dump($con);
+    require_once('connection.php');
 
 
-//     if (isset($_POST['submit']))
-// {
-//     if(empty($_POST['username']) || empty($_POST['password'])){
-//         echo 'Fill in credentials';
-//     }
-//     else{
-//         $userName = $_POST['username'];
-//         $passWord = $_POST['password'];
+    if (isset($_POST['submit']))
+{
 
-//         $query = " insert into stock (username, password) values('$userName', '$passWord')";
-//         $results = mysqli_query($local_db,$query);
+        $userName = $_POST['username'];
+        $passWord = $_POST['password'];
+
+        $query = mysqli_query($local_db, "Insert into stock (username, password) Values ('$userName', '$passWord')");
+
         
-//         if($results){
-//             echo 'data insterted';
-//         }
-        
-//     }
-// }
-// $local_db->close();
+        if($query){
+            echo "<script>alert('data inserted successfully')</script>";
+        }else{
+            echo "<script>alert('error connection to database')</script>";
+        }     
+
+}
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,17 +34,17 @@
     
     <div class="box">
         <h1>Welcome to Art In Voyage Exclusive Shop!</h1>
-        <form class="form" method="POST" action="">
+        <form class="form" method="POST" action="./products.php">
             <!-- <div class="form-group"> -->
-                <div><label class="username">Username:</label></div> 
+                <div><label class="">Username:</label></div> 
                 <input class="inputlog" type="text" name="username" placeholder="username.." required><br>
-                <p class="error"></p>
-                <p class="success"></p>
+                <p class="error"></p><p class="success"></p>
+                
             <!-- </div> -->
             <!-- <div class="form-group"> -->
-                <div><label class="password">Password:</label></div>
+                <div><label class="">Password:</label></div>
                 <input class="inputlog" type="text" name="password" placeholder="password.." required><br>
-                <p class="error"></p>
+                
                 <!-- <p class="success"></p> -->
         
         
@@ -86,11 +57,12 @@
         </form>
     </div>
     
-        <div class="popup-content">
-            <a href="products.php">click here to continue</a>
-        </div>
+        
   
-    <script src="login.js"></script>
+    <script src="./login.js" charset="utf-8"></script>
+    <script src="./logFactory.js" charset="utf-8"></script>
+    
+
     
 </body>
 </html>

@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+   include('connection.php');
+
+   
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,29 +17,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styel.css" >
-    <script src="./cart.js"></script>
+  
+
 </head>
 <body>
     <div class="container">
         <div class="notification">
             <button type="button" class="icon-button">
                 <span class="material-icons">&#x1F6D2</span>
-                <span class="icon-button__badge">2</span>
+                <span class="counter">0</span>
             </button>
         </div>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for item..." autocomplete="off">
-            <span class="input-group-btn">
-                <button class="btn-search" type="button">
+        <button class="btn-search" type="button" oclick="search()">
                     <i class="fa fa-search fa-fw">
                     </i>
                     Search
                 </button>
+            <input type="text" class="form-control" placeholder="Search for item..." autocomplete="off">
+            <span class="input-group-btn">
+                
             </span>
             <div class="myresults"></div>
             </div>
     
-            <div class="products-results">
+            <div class="products-results" >
 
             </div>
         <div class="row1">
@@ -279,7 +293,10 @@
 
     </div>
     <!-- <script src="test.js"></script> -->
-    <script src="search.js"></script>
-    <script src="cart.js"></script>
+    <script src="./search.js"></script>
+    <script src="./addFactory.js" charset="utf-8"></script>
+    <!-- <script src="./cart.js" charset="utf-8"></script> -->
+    <!-- <script scr="./cart.js"></script> -->
+
 </body>
 </html>

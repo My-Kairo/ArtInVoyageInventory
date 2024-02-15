@@ -3,23 +3,48 @@ const passWord = document.querySelector(".password");
 const inputLogs = document.querySelector(".inputlog");
 const logbttn = document.querySelector(".logbut");
 const form = document.querySelector(".form");
-myError = document.querySelector('.error');
-mySuccess = document.querySelector('.success');
+const myError = document.querySelector('.error');
+const mySuccess = document.querySelector('.success');
 
-form.addEventListener('submit', (e)=>{
-    alert('click to');
-    myError.style.color = "red";
-    mySuccess.style.color = "green";
-    let messages = [];
-    if(userName.value === '' || userName == null){
-        messages.push('Username required!');
-    }
-    if(messages.length > 0){
-        e.preventDefault();
-        myError.innerText = messages.join(', ')
+
+var myDetails = "";
+
+
+var detailsInstant = detailsAdd(myDetails);
+
+
+function storing (){
+    myError.style.color = "red"
+    if(detailsInstant.storeDetails(inputLogs.value)){
+        let key = detailsInstant.getDetails();
+        return key;
+    }else {
+        myError.innerHTML = "Enter details";
     }
     
-})
+}
+detailsAdd(myDetails);
+storing ();
+logbttn.addEventListener('click', storing);
+
+
+// form.addEventListener('submit', (e)=>{
+//     // alert('click to');
+//     myError.style.color = "red";
+//     mySuccess.style.color = "green";
+//     let messages = "";
+//     if(userName.value == '' || passWord == 'null'){
+//         messages.push('Field required!');
+//     }
+//     if(messages.length > 0){
+//         e.preventDefault();
+//         myError.innerText = messages.join(', ')
+//     }
+
+// })
+
+
+
 
 
 
