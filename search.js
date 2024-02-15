@@ -23,7 +23,7 @@ const myStock = document.querySelectorAll(".drink-check");
 const theBox = document.querySelector('.nosugar-coke');
 const mySearch = document.querySelector('.input-group');
 
-import MyCart from "./addFactory";
+import {MyCart} from "./addFactory.js";
 
 let result = [];
 var cartInstant = MyCart(result);
@@ -78,18 +78,34 @@ function displayProducts(result){
     productsResult.innerHTML = html;
     
 }
-mybtn.addEventListener('click', function(){
-    alert('clicked');
-    for(i=0; i<result.length; i++){
-        return result[i];
-        
-    }console.log(result[i]);
-})
 
-function displayItems(){
-       
+
+
+function displayItems(stock){
+       productsResult.innerHTML = "";
+       for(var i = 0; stock.length; i++){
+        var getting = display.innerHTML = "";
+        displayProducts = document.createTextNode(stock[i]);
+        getting.appendChild(displayProducts());
+        productsResult.appendChild(getting);
+       }
 }
 
+
+let addingCart = ()=>{
+    if(cartInstant.puttingItems(inputBox.value)){
+        let key = cartInstant.getItems()
+        `<?phpinclude('connection.php');?>`.setItem(plates);
+        displayItems(key)
+    }
+    else
+    {
+        return;
+    }
+}
+
+mybtn.addEventListener('click', addingCart);
+    alert('clicked');
 // myResults.forEach(function(result){
 //     result.addEventListener('click', function(){
 //         item = this.item;

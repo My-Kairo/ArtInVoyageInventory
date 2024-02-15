@@ -3,10 +3,6 @@
 session_start();
    include('connection.php');
 
-   
-
-
-
 
 ?>
 
@@ -293,8 +289,8 @@ session_start();
 
     </div>
     <!-- <script src="test.js"></script> -->
-    <script src="./search.js"></script>
-    <script src="./addFactory.js" charset="utf-8"></script>
+    <script src="./search.js" charset="utf-8" type="module"></script>
+    <script src="./addFactory.js" charset="utf-8" type="module"></script>
     <!-- <script src="./cart.js" charset="utf-8"></script> -->
     <!-- <script scr="./cart.js"></script> -->
 

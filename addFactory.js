@@ -1,6 +1,6 @@
-exports = function MyCart(select){
-    var items = select || [];
 
+export function MyCart(select){
+    var items = select || [];
 
     function puttingItems(stock){
         if(!items.includes(stock)){
