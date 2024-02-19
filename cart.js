@@ -1,27 +1,42 @@
 var carts = document.querySelectorAll('.products-results');
-import MyCart from "./addFactory";
-var cartInstant = MyCart(result);
 const countInsta = document.querySelector('.counter');
 
-let list;
-let cartInstant = myCart(list);
+import {MyCart} from "./addFactory.js";
+let list = [];
+let cartInstant = MyCart(list);
 
 for (let i=0; i < carts.length; i++){
     carts[i].addEventListener('clicks', ()=> {
         console.log("added to cart");
+    if(cartInstant.getItems() = true){
+        countInsta++;
+    }
     })
-    addingCart();
+    
 }
 
 
-function addingCart(){ 
-    var selectedItem = document.querySelector('.product-results').value;
-    selectedItem = carts;
-    console.log(selectedItem);
-}
-addingCart();
+function addingCart(prod){
+    for(let i = 0; i < list.length; i += 1){
+        if(list[i].prod === prod){
+            list[i].qty += 1 
+            return 
+            
+        }
+        console.log(list);
+    }
 
-countInsta.innerHTML = cartInstant.theCounter();
+    countInsta = {prod, qty: 1}
+    list.push(countInsta);
+
+    // var selectedItem = document.querySelector('.product-results');
+    // selectedItem = carts;
+    
+}
+addingCart(list)
+// addingCart();
+
+// countInsta.innerHTML = cartInstant.theCounter();
 
 
 

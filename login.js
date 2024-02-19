@@ -5,7 +5,7 @@ const logbttn = document.querySelector(".logbut");
 const form = document.querySelector(".form");
 const myError = document.querySelector('.error');
 const mySuccess = document.querySelector('.success');
-
+import {detailsAdd} from "./logFactory.jsFactory.js";
 
 var myDetails = "";
 

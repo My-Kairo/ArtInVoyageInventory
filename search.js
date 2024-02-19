@@ -23,18 +23,23 @@ const myStock = document.querySelectorAll(".drink-check");
 const theBox = document.querySelector('.nosugar-coke');
 const mySearch = document.querySelector('.input-group');
 
+
+import { detailsAdd } from "./logFactory.js";
 import {MyCart} from "./addFactory.js";
 
 let result = [];
 var cartInstant = MyCart(result);
+var addInstant = detailsAdd(result);
+
 
 // inputBox.addEventListener('keyup', ()=>{
 //     myResults.innerText = inputBox.value;
 //     console.log(myResults);
     
 // });
-
-inputBox.onkeyup = function(){
+console.log(inputBox);
+inputBox.addEventListener('keyup', (e) =>{
+    // inputBox = e.target.value;
     
     let input = inputBox.value;
     if (input.length){
@@ -49,7 +54,7 @@ inputBox.onkeyup = function(){
     if(!result.length){
         result.innerHTML = '';
     }
-}
+});
 
 function display(result){
     
@@ -90,9 +95,11 @@ function displayItems(stock){
         productsResult.appendChild(getting);
        }
 }
+displayItems(result)
 
+let addingCart = (val)=>{
+  
 
-let addingCart = ()=>{
     if(cartInstant.puttingItems(inputBox.value)){
         let key = cartInstant.getItems()
         `<?phpinclude('connection.php');?>`.setItem(plates);
@@ -103,16 +110,22 @@ let addingCart = ()=>{
         return;
     }
 }
+addingCart(result);
 
-mybtn.addEventListener('click', addingCart);
+mybtn.addEventListener('click', function addingCart(){
     alert('clicked');
-// myResults.forEach(function(result){
-//     result.addEventListener('click', function(){
-//         item = this.item;
-//         inputBox.value = item;
-//         alert('this is my list');
-//     })
-// })
+myResults.forEach(function(result){
+    result.addEventListener('click', function(){
+        item = this.item;
+        inputBox.value = item;
+    })
+})
+})
+
+// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
 // function selectingProducts (){
 //     for( const input of myResults){
 //         input.addEventListener('click', function myClick(){

@@ -34,8 +34,8 @@ session_start();
             <span class="input-group-btn">
                 
             </span>
-            <div class="myresults"></div>
-            </div>
+            <ul class="myresults"></div>
+            <ul>
     
             <div class="products-results" >
 
@@ -291,7 +291,7 @@ session_start();
     <!-- <script src="test.js"></script> -->
     <script src="./search.js" charset="utf-8" type="module"></script>
     <script src="./addFactory.js" charset="utf-8" type="module"></script>
-    <!-- <script src="./cart.js" charset="utf-8"></script> -->
+    <script src="./cart.js" charset="utf-8"></script>
     <!-- <script scr="./cart.js"></script> -->
 
 </body>

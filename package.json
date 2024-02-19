@@ -3,14 +3,15 @@
   "mode": "start",
   "name": "artinvoyage",
   "version": "1.0.0",
-  "main": "search.js",
+  "main": "search.js, cart.js",
   "type": "module",
   "directories": {
     "test": "test"
   },
+  
   "scripts": {
     "test": "mocha",
-    "start": " node search.js"
+    "start": " node search.js, cart.js"
   },
   "dependencies": {
     "express": "^4.18.2",

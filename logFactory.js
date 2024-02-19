@@ -1,4 +1,4 @@
-function detailsAdd (logs){
+export function detailsAdd (logs){
     
     var insertIn = logs || [];
 
